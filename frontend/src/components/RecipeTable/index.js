@@ -21,7 +21,7 @@ const RecipeTable = () => {
       setLoading(true);
       try {
         const params = new URLSearchParams({ page, limit });
-        const res = await fetch(`http://localhost:3001/api/recipes?${params}`);
+        const res = await fetch(`https://recipe-i59r.onrender.com/api/recipes?${params}`);
         const data = await res.json();
         setRecipes(data.data);
         setTotal(data.total);
@@ -42,7 +42,7 @@ const RecipeTable = () => {
       if (filters.cuisine) params.append('cuisine', filters.cuisine);
       if (filters.rating) params.append('rating', `>=${filters.rating}`);
 
-      const res = await fetch(`http://localhost:3001/api/recipes/search?${params}`);
+      const res = await fetch(`https://recipe-i59r.onrender.com/api/recipes/search?${params}`);
       const data = await res.json();
       console.log('Search results:', data);
       setRecipes(data.data);
