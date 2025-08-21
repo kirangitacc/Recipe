@@ -1,19 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Express backend for Recipe Explorer project",
+  "main": "server.js",
   "type": "module",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kiran",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "fs": "^0.0.1-security",
     "nodemon": "^3.1.10",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
